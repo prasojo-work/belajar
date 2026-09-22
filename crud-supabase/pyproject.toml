@@ -1,0 +1,25 @@
+[project]
+name = "crud-supabase"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "prasojo jiwandono", email = "prasojoforwork@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "email-validator>=2.3.0",
+    "fastapi>=0.141.1",
+    "psycopg[binary]>=3.3.6",
+    "pydantic-settings>=2.15.0",
+    "slowapi>=0.1.10",
+    "sqlalchemy>=2.0",
+    "uvicorn[standard]>=0.53.0",
+]
+
+[project.scripts]
+crud-supabase = "crud_supabase:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
