@@ -72,24 +72,43 @@ uv run <perintah>          # menjalankan perintah di environment project
 1. Commit dan push seluruh project ke GitHub, terutama:
    `pyproject.toml`, `uv.lock`, `streamlit_app.py`, folder `src/`, dan folder `data/`.
 2. Buka [share.streamlit.io](https://share.streamlit.io) → **Create app**.
-3. Isi repository dan branch, lalu isi **Main file path** dengan:
+3. Isi repository dan branch, lalu isi **Main file path** sesuai posisi project
+   di repository:
 
-   ```text
-   streamlit_app.py
-   ```
+   - Jika repository **hanya berisi folder project ini**, isi:
+
+     ```text
+     streamlit_app.py
+     ```
+
+   - Jika project ini berada di dalam monorepo (misalnya repository root-nya
+     `belajar/`), isi:
+
+     ```text
+     streamlit_visualization/streamlit_app.py
+     ```
+
+   Ini penting: Streamlit Cloud mencari dependency di **folder entrypoint**
+   lalu di **root repository**. `uv.lock` harus berada di salah satu lokasi
+   tersebut.
 
 4. Buka **Advanced settings** → **Python version**, pilih **3.12** (default
    Community Cloud) atau 3.13. Project ini membutuhkan Python **≥ 3.12**.
 5. Klik **Deploy**.
 
-Streamlit Cloud akan otomatis mendeteksi `uv.lock` di root repository dan
-menjalankan `uv sync` untuk memasang dependency (`pandas`, `plotly`, `numpy`,
-`openpyxl`, `xlrd`, dan Streamlit). File `streamlit_app.py` di root hanyalah
-entry point yang menjalankan aplikasi asli di `src/eduscope_id/app.py`.
+Streamlit Cloud akan otomatis mendeteksi `uv.lock` yang sejajar dengan
+`streamlit_app.py` dan menjalankan `uv sync` untuk memasang dependency
+(`pandas`, `plotly`, `numpy`, `openpyxl`, `xlrd`, dan Streamlit).
+`streamlit_app.py` hanyalah entry point yang menjalankan aplikasi asli di
+`src/eduscope_id/app.py`.
 
 Jika masih ada error:
 
 - Buka **Manage app → Logs** untuk melihat pesan asli yang tidak diredaksi.
+- `ModuleNotFoundError: No module named 'plotly'` biasanya berarti dependency
+  tidak terpasang karena `uv.lock` tidak ditemukan. Pastikan Main file path
+  menunjuk ke `streamlit_visualization/streamlit_app.py` (untuk monorepo),
+  bukan ke `streamlit_visualization/src/eduscope_id/app.py`.
 - Pastikan tidak memilih Python 3.11 atau lebih lama, karena NumPy 2.5
   membutuhkan Python ≥ 3.12.
 - Setelah mengubah dependency atau Python version, lakukan **Reboot app**.
