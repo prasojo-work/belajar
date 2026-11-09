@@ -1,0 +1,21 @@
+[project]
+name = "eduscope-id"
+version = "0.1.0"
+description = "Dasbor interaktif pendidikan Indonesia dengan Streamlit dan Plotly"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=1.26,<3.0",
+    "openpyxl>=3.1,<4.0",
+    "pandas>=2.2,<4.0",
+    "plotly>=5.24,<8.0",
+    "streamlit>=1.67,<2.0",
+    "xlrd>=2.0,<3.0",
+]
+
+[project.scripts]
+eduscope-id = "eduscope_id:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
