@@ -3,7 +3,7 @@ name = "eduscope-id"
 version = "0.1.0"
 description = "Dasbor interaktif pendidikan Indonesia dengan Streamlit dan Plotly"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "numpy>=1.26,<3.0",
     "openpyxl>=3.1,<4.0",

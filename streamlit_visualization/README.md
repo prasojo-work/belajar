@@ -67,6 +67,37 @@ uv sync --locked           # install persis sesuai uv.lock (cocok untuk CI)
 uv run <perintah>          # menjalankan perintah di environment project
 ```
 
+## Deploy ke Streamlit Community Cloud
+
+1. Commit dan push seluruh project ke GitHub, terutama:
+   `pyproject.toml`, `uv.lock`, `streamlit_app.py`, folder `src/`, dan folder `data/`.
+2. Buka [share.streamlit.io](https://share.streamlit.io) → **Create app**.
+3. Isi repository dan branch, lalu isi **Main file path** dengan:
+
+   ```text
+   streamlit_app.py
+   ```
+
+4. Buka **Advanced settings** → **Python version**, pilih **3.12** (default
+   Community Cloud) atau 3.13. Project ini membutuhkan Python **≥ 3.12**.
+5. Klik **Deploy**.
+
+Streamlit Cloud akan otomatis mendeteksi `uv.lock` di root repository dan
+menjalankan `uv sync` untuk memasang dependency (`pandas`, `plotly`, `numpy`,
+`openpyxl`, `xlrd`, dan Streamlit). File `streamlit_app.py` di root hanyalah
+entry point yang menjalankan aplikasi asli di `src/eduscope_id/app.py`.
+
+Jika masih ada error:
+
+- Buka **Manage app → Logs** untuk melihat pesan asli yang tidak diredaksi.
+- Pastikan tidak memilih Python 3.11 atau lebih lama, karena NumPy 2.5
+  membutuhkan Python ≥ 3.12.
+- Setelah mengubah dependency atau Python version, lakukan **Reboot app**.
+- Jangan menambahkan `requirements.txt` selama `uv.lock` masih ada: Community
+  Cloud memprioritaskan `uv.lock`. Jika suatu saat perlu fallback ke pip,
+  rename/hapus `uv.lock` lalu buat `requirements.txt` dari isi
+  `dependencies` di `pyproject.toml`.
+
 ## Struktur project
 
 ```
@@ -74,6 +105,7 @@ streamlit_visualization/
 ├── pyproject.toml           # metadata project + dependencies
 ├── uv.lock                  # lockfile dependency
 ├── .python-version          # versi Python untuk uv
+├── streamlit_app.py         # entry point deploy Streamlit Cloud
 ├── README.md
 ├── .streamlit/
 │   └── config.toml          # tema & konfigurasi server
@@ -126,4 +158,4 @@ Di bagian atas `src/eduscope_id/app.py` terdapat konstanta yang mudah diubah:
 
 ## Versi yang diuji
 
-Python 3.13, Streamlit 1.67, pandas 3.1, Plotly 7.1, NumPy 2.5.
+Python 3.12 & 3.13, Streamlit 1.67, pandas 3.1, Plotly 7.1, NumPy 2.5.
