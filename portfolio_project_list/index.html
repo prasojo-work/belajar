@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prasojo Jiwandono — Web &amp; Data</title>
+  <meta name="description" content="Portofolio Prasojo Jiwandono. Dua project yang sudah live: dasbor data pendidikan dengan Streamlit &amp; Plotly, dan toko furniture dengan Next.js.">
+  <meta name="author" content="Prasojo Jiwandono">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prasojo Jiwandono — Web &amp; Data">
+  <meta property="og:description" content="Dua project web yang sudah selesai dan bisa dicoba: dasbor pendidikan dan toko furniture.">
+  <meta property="og:image" content="assets/img/eduscope.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lompat ke konten</a>
+
+  <header class="site-header" id="top">
+    <div class="shell site-header__inner">
+      <a class="brand" href="#top" aria-label="Prasojo Jiwandono — kembali ke atas">
+        <span class="brand__mark" aria-hidden="true">PJ</span>
+        <span class="brand__text">Prasojo<br>Jiwandono</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a class="nav__link" href="#project">Project <span class="nav__count">02</span></a>
+        <a class="nav__link" href="#tentang">Tentang</a>
+        <a class="nav__link" href="#kontak">Kontak</a>
+        <a class="btn btn--small btn--accent" href="mailto:jiwandonoprasojo@gmail.com">
+          Email saya
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================================================
+         HERO — ganti nama, headline, dan ringkasan di sini
+         ============================================================ -->
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--status">
+          <span class="pulse" aria-hidden="true"></span>
+          Terbuka untuk freelance &amp; full-time
+        </p>
+
+        <h1 id="hero-title" class="hero__title">
+          Membangun web<br>
+          dan <em>dasbor data.</em>
+        </h1>
+
+        <p class="hero__lede">
+          Saya <strong>Prasojo Jiwandono</strong>. Saya membuat antarmuka web dan
+          dasbor interaktif, kebanyakan dengan Python, Streamlit, dan Next.js.
+          Halaman ini berisi dua project yang sudah selesai dan bisa dicoba
+          langsung.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--accent btn--lg" href="#project">
+            Lihat project
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="mailto:jiwandonoprasojo@gmail.com">
+            Hubungi saya
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <dl class="hero__stats">
+          <div>
+            <dt>Project selesai</dt>
+            <dd>02</dd>
+          </div>
+          <div>
+            <dt>Provinsi di dasbor</dt>
+            <dd>38</dd>
+          </div>
+          <div>
+            <dt>Teknologi dipakai</dt>
+            <dd>6+</dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="profile-card" aria-label="Ringkasan profil">
+        <div class="profile-card__bar">
+          <span class="profile-card__status"><span class="dot" aria-hidden="true"></span>Terbuka untuk kerja</span>
+          <span class="mono">ID &middot; GMT+7</span>
+        </div>
+
+        <div class="profile-card__art" aria-hidden="true">
+          <svg class="profile-card__spark" viewBox="0 0 420 240" fill="none" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop stop-color="#d8f26b" stop-opacity=".24"/>
+                <stop offset="1" stop-color="#d8f26b" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 196c38-2 52-46 88-40 36 6 48-38 84-30s52-44 88-36 52-38 88-30 52-44 72-52v232H0Z" fill="url(#spark-fill)"/>
+            <path d="M0 196c38-2 52-46 88-40 36 6 48-38 84-30s52-44 88-36 52-38 88-30 52-44 72-52" stroke="#d8f26b" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="348" cy="62" r="4" fill="#d8f26b"/>
+            <circle cx="348" cy="62" r="9" stroke="#d8f26b" stroke-opacity=".3"/>
+          </svg>
+
+          <span class="profile-card__monogram">PJ</span>
+          <span class="float-chip float-chip--python">Python</span>
+          <span class="float-chip float-chip--next">Next.js</span>
+          <span class="float-chip float-chip--streamlit">Streamlit</span>
+        </div>
+
+        <div class="profile-card__foot">
+          <p class="mono">Fokus saat ini</p>
+          <p class="profile-card__title">Dasbor data &amp;<br>produk web.</p>
+          <ul class="profile-card__stack" aria-label="Teknologi utama">
+            <li>Streamlit</li>
+            <li>Next.js</li>
+            <li>Plotly</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><i>&#10022;</i>
+        <span>Next.js</span><i>&#10022;</i>
+        <span>Streamlit</span><i>&#10022;</i>
+        <span>Plotly</span><i>&#10022;</i>
+        <span>FastAPI</span><i>&#10022;</i>
+        <span>Supabase</span><i>&#10022;</i>
+        <span>TypeScript</span><i>&#10022;</i>
+        <span>Docker</span><i>&#10022;</i>
+        <span>Python</span><i>&#10022;</i>
+        <span>Next.js</span><i>&#10022;</i>
+        <span>Streamlit</span><i>&#10022;</i>
+        <span>Plotly</span><i>&#10022;</i>
+        <span>FastAPI</span><i>&#10022;</i>
+        <span>Supabase</span><i>&#10022;</i>
+        <span>TypeScript</span><i>&#10022;</i>
+        <span>Docker</span><i>&#10022;</i>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PROJECT — untuk menambah project baru, copy satu
+         <article class="project"> ... </article> di bawah,
+         lalu ganti nomor, gambar, judul, deskripsi, tag, dan link.
+         ============================================================ -->
+    <section class="section shell" id="project" aria-labelledby="project-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 &mdash; Project</p>
+        <div class="section-head__row">
+          <h2 id="project-title">Project yang<br><em>sudah selesai.</em></h2>
+          <p class="section-head__note">
+            Keduanya sudah live dan bisa dicoba langsung. Satu berisi data
+            pendidikan, satu lagi katalog furniture.
+          </p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <!-- PROJECT 01 -->
+        <article class="project reveal">
+          <a class="project__media" href="https://belajar-9sttgzfv7lvb2ao5xp8ptt.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="Buka EduScope ID di tab baru">
+            <picture>
+              <source srcset="assets/img/eduscope-720.jpg 720w, assets/img/eduscope.jpg 1440w" sizes="(min-width: 840px) 50vw, 100vw">
+              <img src="assets/img/eduscope.jpg" width="1440" height="900" loading="lazy" decoding="async" alt="Tampilan dasbor EduScope ID dengan kartu KPI dan grafik partisipasi sekolah Indonesia.">
+            </picture>
+            <span class="project__open">
+              Buka live site
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <div class="project__body">
+            <p class="project__meta">
+              <span class="project__index">01</span>
+              <span>Data Visualization</span>
+              <span class="project__live"><span class="dot" aria-hidden="true"></span>Live</span>
+            </p>
+            <h3 class="project__title">
+              <a href="https://belajar-9sttgzfv7lvb2ao5xp8ptt.streamlit.app" target="_blank" rel="noopener noreferrer">EduScope ID</a>
+            </h3>
+            <p class="project__desc">
+              Dasbor pendidikan Indonesia dari tiga dataset Excel: partisipasi
+              sekolah, tingkat penyelesaian, dan sebaran pendidik di 38 provinsi.
+              Ada peta choropleth, filter wilayah, dan unduhan CSV.
+            </p>
+            <ul class="tags" aria-label="Teknologi yang digunakan">
+              <li>Python</li>
+              <li>Streamlit</li>
+              <li>Plotly</li>
+              <li>Pandas</li>
+            </ul>
+            <a class="project__link" href="https://belajar-9sttgzfv7lvb2ao5xp8ptt.streamlit.app" target="_blank" rel="noopener noreferrer">
+              Kunjungi project
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 02 -->
+        <article class="project reveal">
+          <a class="project__media" href="https://ecommerce-project-five-psi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Buka LYSHEIM di tab baru">
+            <picture>
+              <source srcset="assets/img/lysheim-720.jpg 720w, assets/img/lysheim.jpg 1440w" sizes="(min-width: 840px) 50vw, 100vw">
+              <img src="assets/img/lysheim.jpg" width="1440" height="900" loading="lazy" decoding="async" alt="Halaman utama LYSHEIM dengan headline Furniture for the long stay dan katalog furniture.">
+            </picture>
+            <span class="project__open">
+              Buka live site
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <div class="project__body">
+            <p class="project__meta">
+              <span class="project__index">02</span>
+              <span>E-commerce</span>
+              <span class="project__live"><span class="dot" aria-hidden="true"></span>Live</span>
+            </p>
+            <h3 class="project__title">
+              <a href="https://ecommerce-project-five-psi.vercel.app" target="_blank" rel="noopener noreferrer">LYSHEIM</a>
+            </h3>
+            <p class="project__desc">
+              Toko furniture dengan katalog produk dan halaman detail yang
+              mencantumkan material, finishing, dan status stok. Dibangun dengan
+              Next.js dan di-deploy ke Vercel.
+            </p>
+            <ul class="tags" aria-label="Teknologi yang digunakan">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Vercel</li>
+            </ul>
+            <a class="project__link" href="https://ecommerce-project-five-psi.vercel.app" target="_blank" rel="noopener noreferrer">
+              Kunjungi project
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="collab reveal">
+        <div>
+          <p class="mono">Project berikutnya</p>
+          <p class="collab__title">Kalau ada yang bisa saya bantu, <em>kirim email.</em></p>
+        </div>
+        <a class="btn btn--ghost" href="mailto:jiwandonoprasojo@gmail.com">
+          Hubungi saya
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TENTANG
+         ============================================================ -->
+    <section class="section section--about" id="tentang" aria-labelledby="about-title">
+      <div class="shell about">
+        <div class="about__intro reveal">
+          <p class="eyebrow">02 &mdash; Tentang</p>
+          <h2 id="about-title">Belajar sambil<br><em>mengerjakan.</em></h2>
+          <p class="about__location">
+            <span class="dot" aria-hidden="true"></span>
+            Indonesia &middot; GMT+7
+          </p>
+
+          <blockquote class="about__quote">
+            <p>&ldquo;Sebagian besar yang saya tahu datang dari mencoba dan memperbaiki.&rdquo;</p>
+          </blockquote>
+        </div>
+
+        <div class="about__body reveal">
+          <p>
+            Rasa penasaran soal data membawa saya belajar Python dan Pandas. Dari
+            situ saya membuat dasbor Streamlit untuk menampilkan data
+            pendidikan&mdash;project pertama di halaman ini.
+          </p>
+          <p>
+            Sekarang saya juga belajar membangun web dengan Next.js dan React.
+            Saya masih belajar, dan setiap project saya pakai untuk mencoba hal
+            baru sambil berusaha membuat hasilnya rapi dan mudah dipakai.
+          </p>
+
+          <div class="process">
+            <p class="mono process__label">Yang saya usahakan</p>
+            <ol class="process__list">
+              <li>
+                <span class="process__num">01</span>
+                <div>
+                  <h3>Pahami data dan tujuannya</h3>
+                  <p>Saya coba mengerti dulu data yang ada dan apa yang ingin ditampilkan.</p>
+                </div>
+              </li>
+              <li>
+                <span class="process__num">02</span>
+                <div>
+                  <h3>Buat versi sederhana</h3>
+                  <p>Saya utamakan versi yang bisa dicoba dulu, lalu diperbaiki sedikit demi sedikit.</p>
+                </div>
+              </li>
+              <li>
+                <span class="process__num">03</span>
+                <div>
+                  <h3>Terbuka pada masukan</h3>
+                  <p>Saya senang menerima kritik untuk memperbaiki tampilan maupun alurnya.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell stack reveal">
+        <div class="stack__group">
+          <h3>Bahasa &amp; Framework</h3>
+          <ul>
+            <li>Python</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+        <div class="stack__group">
+          <h3>Data &amp; Visualisasi</h3>
+          <ul>
+            <li>Pandas</li>
+            <li>Plotly</li>
+            <li>Streamlit</li>
+            <li>Excel</li>
+          </ul>
+        </div>
+        <div class="stack__group">
+          <h3>Backend &amp; Tools</h3>
+          <ul>
+            <li>FastAPI</li>
+            <li>Supabase</li>
+            <li>Docker</li>
+            <li>Git</li>
+            <li>Vercel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         KONTAK
+         ============================================================ -->
+    <section class="contact" id="kontak" aria-labelledby="contact-title">
+      <div class="shell">
+        <p class="eyebrow eyebrow--dark reveal">03 &mdash; Kontak</p>
+        <div class="contact__grid">
+          <h2 id="contact-title" class="contact__title reveal">
+            Ada yang bisa<br>
+            <em>saya bantu?</em>
+          </h2>
+          <div class="contact__side reveal">
+            <p>
+              Kalau ada pertanyaan tentang project di halaman ini, atau ingin
+              ngobrol soal data dan web, kirim email saja. Saya akan berusaha
+              membalas secepatnya.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--dark btn--lg" href="mailto:jiwandonoprasojo@gmail.com">
+                jiwandonoprasojo@gmail.com
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn--outline-dark btn--lg" href="https://github.com/prasojo-work" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <p>&copy; <span id="year">2026</span> Prasojo Jiwandono</p>
+      <p class="footer__note">Dibuat dengan HTML, CSS, dan sedikit JavaScript.</p>
+      <a href="#top">Kembali ke atas <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prasojo Jiwandono",
+    "jobTitle": "Developer",
+    "email": "mailto:jiwandonoprasojo@gmail.com",
+    "url": "https://github.com/prasojo-work",
+    "address": { "@type": "PostalAddress", "addressCountry": "ID" },
+    "knowsAbout": ["Python", "Streamlit", "Plotly", "Pandas", "Next.js", "React", "TypeScript", "FastAPI", "Supabase"]
+  }
+  </script>
+</body>
+</html>
